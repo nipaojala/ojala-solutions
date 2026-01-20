@@ -68,7 +68,7 @@
     "error": "Jotain meni pieleen. Yritä uudelleen."
   },
   "Footer": {
-    "description": "Ammattimainen ohjelmistokehityspalvelut, jotka keskittyvät web-teknologioihin ja tekoälyyn.",
+    "description": "Ammattimaista web-kehitystä, jolla saat juuri oikean lopputuloksen.",
     "quickLinks": "Pikalinkit",
     "connect": "Yhteydenotot"
   },
@@ -76,15 +76,15 @@
     "layout": {
       "title": "Ojala Solutions | Ohjelmistokehitys & Web-teknologiat",
       "titleTemplate": "%s | Ojala Solutions",
-      "description": "Ammattimaiset ohjelmistokehityspalvelut Niilo Ojalalta. 3+ vuoden kokemus pankkiohjelmistosta, tekoälystä ja web-teknologioista. Erikoistunut Reactiin, Node.js:ään, TypeScriptiin ja pilvipalveluihin. Suomesta.",
+      "description": "Ammattimaiset ohjelmistokehityspalvelut Niilo Ojalalta. 3+ vuoden kokemus ohjelmistokehityksestä, tekoälystä ja web-teknologioista. Erikoistunut Reactiin, Node.js:ään, TypeScriptiin ja pilvipalveluihin. Suomesta.",
       "ogTitle": "Ojala Solutions | Ohjelmistokehitys & Web-teknologiat",
-      "ogDescription": "Ammattimaiset ohjelmistokehityspalvelut Niilo Ojalalta. 3+ vuoden kokemus pankkiohjelmistosta, tekoälystä ja web-teknologioista."
+      "ogDescription": "Ammattimaiset ohjelmistokehityspalvelut Niilo Ojalalta. 3+ vuoden kokemus ohjelmistokehityksestä, tekoälystä ja web-teknologioista."
     },
     "home": {
-      "title": "Ojala Solutions | Ammattimainen ohjelmistokehityspalvelut",
-      "description": "Ammattimaiset ohjelmistokehityspalvelut Niilo Ojalalta. 3+ vuoden kokemus pankkiohjelmistosta, tekoälystä ja web-teknologioista. Erikoistunut Reactiin, Node.js:ään, TypeScriptiin ja pilvipalveluihin. Suomesta.",
-      "ogTitle": "Ojala Solutions | Ammattimainen ohjelmistokehityspalvelut",
-      "ogDescription": "Ammattimaiset ohjelmistokehityspalvelut Niilo Ojalalta. 3+ vuoden kokemus pankkiohjelmistosta, tekoälystä ja web-teknologioista."
+      "title": "Ojala Solutions | Ammattimaiset ohjelmistokehityspalvelut",
+      "description": "Ammattimaiset ohjelmistokehityspalvelut Niilo Ojalalta. 3+ vuoden kokemus ohjelmistokehityksestä, tekoälystä ja web-teknologioista. Erikoistunut Reactiin, Node.js:ään, TypeScriptiin ja pilvipalveluihin. Suomesta.",
+      "ogTitle": "Ojala Solutions | Ammattimaiset ohjelmistokehityspalvelut",
+      "ogDescription": "Ammattimaiset ohjelmistokehityspalvelut Niilo Ojalalta. 3+ vuoden kokemus ohjelmistokehityksestä, tekoälystä ja web-teknologioista."
     },
     "projects": {
       "title": "Portfolio | Ojala Solutions - Case Studies & Työt",
