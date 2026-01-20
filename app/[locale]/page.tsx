@@ -10,6 +10,7 @@ import Typewriter from '../components/Typewriter';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { use } from 'react';
 import profilePic from '@/public/profilePic.webp';
+import logo from '@/public/logo.webp';
 
 interface LocaleLayoutProps {
   children: React.ReactNode;
@@ -152,7 +153,7 @@ export default function Home({params}: LocaleLayoutProps) {
               <div className="relative w-full max-w-md">
                 <div className="absolute inset-0 bg-linear-to-r from-[#A8DF8E] to-[#FFAAB8] rounded-3xl transform rotate-3 blur-xl opacity-30"></div>
                 <Image
-                  src="/logo.png"
+                  src={logo}
                   alt="Ojala Solutions Logo"
                   width={500}
                   height={500}
