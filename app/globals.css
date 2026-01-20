@@ -67,6 +67,15 @@ body {
   }
 }
 
+@keyframes breathe {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
 .animate-fade-in-up {
   animation: fadeInUp 0.8s ease-out forwards;
 }
@@ -81,6 +90,10 @@ body {
 
 .animate-slide-in-right {
   animation: slideInRight 0.8s ease-out forwards;
+}
+
+.animate-breathe {
+  animation: breathe 4s ease-in-out infinite;
 }
 
 .delay-100 {
@@ -111,4 +124,14 @@ body {
 .delay-600 {
   animation-delay: 0.6s;
   opacity: 0;
+}
+
+/* Hide scrollbar for carousel thumbnails */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari and Opera */
 }

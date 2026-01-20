@@ -1,0 +1,103 @@
+{
+  "Home": {
+    "hero": {
+      "tagline": "Professional web technologies that deliver the results you want.",
+      "getInTouch": "Get in Touch",
+      "learnMore": "Learn More"
+    },
+    "about": {
+      "title": "About Me",
+      "intro": "I'm <strong>Niilo Ojala</strong>, a {age} year-old software developer with {years} years of professional experience at software development.",
+      "journey": "My journey in software development has been driven by a passion for creating innovative solutions. I hold a major in <strong>Computer Science from Aalto University</strong>, where I specialized in web technologies.",
+      "experience": "My professional experience has focused on building scalable web applications. I completed my thesis at <strong>Osuuspankki on AI and banking software</strong>, combining AI and software development.",
+      "projects": "Beyond my professional work, I've completed countless personal projects that have helped me explore new technologies and expand my skill set."
+    },
+    "skills": {
+      "title": "Skills & Technologies",
+      "subtitle": "These tools I have used in development"
+    },
+    "contact": {
+      "title": "Get In Touch",
+      "subtitle": "Looking for a software solution for your company? Let's discuss how I can help build your application."
+    }
+  },
+  "Projects": {
+    "title": "Portfolio",
+    "subtitle": "Showcase of my applications",
+    "approt": {
+      "name": "Approt.app",
+      "tag": "Web App",
+      "description": "Digital solution for student bar crawl events. Replaces physical appro-passes with a modern, paperless system that eliminates lost stamps, complex logistics, and long queues.",
+      "features": "Key Features:",
+      "feature1": "Digital appro-passes and QR code scanning",
+      "feature2": "Real-time event tracking and analytics",
+      "feature3": "Interactive maps with location tracking",
+      "feature4": "Admin dashboard for event organizers",
+      "viewProject": "View Application"
+    },
+    "isofan": {
+      "name": "Isofan",
+      "tag": "Corporate Website",
+      "description": "Company website for LVI systems importer specializing in energy-efficient solutions. Features an interactive energy savings calculator and comprehensive product information.",
+      "features": "Key Features:",
+      "feature1": "Interactive energy savings calculator",
+      "feature2": "Product catalog and specifications",
+      "feature3": "Responsive design for all devices",
+      "feature4": "Modern UI with smooth animations",
+      "viewProject": "View Application"
+    },
+    "backToHome": "Back to Home"
+  },
+  "Navigation": {
+    "about": "About",
+    "skills": "Skills",
+    "portfolio": "Portfolio",
+    "contact": "Contact"
+  },
+  "ContactForm": {
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "namePlaceholder": "Your name",
+    "emailPlaceholder": "your.email@example.com",
+    "messagePlaceholder": "Tell me about your application...",
+    "send": "Send Message",
+    "sending": "Sending...",
+    "success": "Message Sent!",
+    "successMessage": "Thank you! I'll get back to you soon.",
+    "error": "Something went wrong. Please try again."
+  },
+  "Footer": {
+    "description": "Professional software development services with a focus on web technologies and AI.",
+    "quickLinks": "Quick Links",
+    "connect": "Connect"
+  },
+  "Metadata": {
+    "layout": {
+      "title": "Ojala Solutions | Software Development & Web Technologies",
+      "titleTemplate": "%s | Ojala Solutions",
+      "description": "Professional software development services by Niilo Ojala. 3+ years of experience in banking software, AI, and web technologies. Specialized in React, Node.js, TypeScript, and cloud services. Based in Finland.",
+      "ogTitle": "Ojala Solutions | Software Development & Web Technologies",
+      "ogDescription": "Professional software development services by Niilo Ojala. 3+ years of experience in banking software, AI, and web technologies."
+    },
+    "home": {
+      "title": "Ojala Solutions | Professional Software Development Services",
+      "description": "Professional software development services by Niilo Ojala. 3+ years of experience in banking software, AI, and web technologies. Specialized in React, Node.js, TypeScript, and cloud services. Based in Finland.",
+      "ogTitle": "Ojala Solutions | Professional Software Development Services",
+      "ogDescription": "Professional software development services by Niilo Ojala. 3+ years of experience in banking software, AI, and web technologies."
+    },
+    "projects": {
+      "title": "Portfolio | Ojala Solutions - Case Studies & Work",
+      "description": "Explore portfolio projects by Niilo Ojala: Approt.app (digital student bar crawl passes) and Isofan (energy-efficient LVI systems company website with savings calculator). Built with React, Next.js, and modern web technologies.",
+      "ogTitle": "Portfolio | Ojala Solutions - Case Studies & Work",
+      "ogDescription": "Explore portfolio projects by Niilo Ojala: Approt.app and Isofan. Built with React, Next.js, and modern web technologies."
+    }
+  },
+  "LocaleSwitcher": {
+    "label": "Language",
+    "locale": {
+      "fi": "Finnish",
+      "en": "English"
+    }
+  }
+}

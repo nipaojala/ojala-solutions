@@ -1,0 +1,103 @@
+{
+  "Home": {
+    "hero": {
+      "tagline": "Ammattimaista web-kehitystä, jolla saat juuri oikean lopputuloksen.",
+      "getInTouch": "Ota yhteyttä",
+      "learnMore": "Lue lisää"
+    },
+    "about": {
+      "title": "Tietoja minusta",
+      "intro": "Olen <strong>Niilo Ojala</strong>, {age} vuoden ikäinen ohjelmistokehittäjä, jolla on {years} vuoden ammattimainen kokemus ohjelmistokehityksestä.",
+      "journey": "Matkani ohjelmistokehityksessä on ohjannut intohimo luoda innovatiivisia ratkaisuja. Minulla oli pääaineena <strong>tietojenkäsittelytiede Aalto-yliopistosta</strong>, jossa erikoistuin web-teknologioihin.",
+      "experience": "Olen keskittynyt skaalautuvien web-sovellusten rakentamiseen. Suoritin lopputyöni <strong>Osuuspankissa tekoälystä ja pankkiohjelmistosta</strong>, yhdistäen tekoälyn ja ohjelmistokehityksen.",
+      "projects": "Ammattimaisen työni lisäksi olen tehnyt monia henkilökohtaisia projekteja, jotka ovat auttaneet minua tutustumaan uusiin teknologioihin ja laajentamaan taitojani."
+    },
+    "skills": {
+      "title": "Taidot ja teknologiat",
+      "subtitle": "Näitä työkaluja olen käyttänyt kehittämisessä"
+    },
+    "contact": {
+      "title": "Ota yhteyttä",
+      "subtitle": "Etsitkö ohjelmistoratkaisua yrityksellesi? Keskustellaan siitä, miten voin auttaa rakentamaan sovelluksesi."
+    }
+  },
+  "Projects": {
+    "title": "Portfolio",
+    "subtitle": "Esittely sovelluksista",
+    "approt": {
+      "name": "Approt.app",
+      "tag": "Web-sovellus",
+      "description": "Digitaalinen ratkaisu opiskelijoiden approtapahtumiin. Korvaa fyysiset appro-passit modernilla, paperittomalla järjestelmällä, joka poistaa kadonneet leimat, monimutkaisen logistiikan ja pitkät jonot.",
+      "features": "Pääominaisuudet:",
+      "feature1": "Digitaaliset appro-passit ja QR-koodin skannaus",
+      "feature2": "Reaaliaikainen tapahtumaseuranta ja analytiikka",
+      "feature3": "Interaktiiviset kartat sijaintiseurannalla",
+      "feature4": "Hallintapaneeli tapahtuman järjestäjille",
+      "viewProject": "Katso sovellus"
+    },
+    "isofan": {
+      "name": "Isofan",
+      "tag": "Yrityssivusto",
+      "description": "Yrityssivusto LVI-järjestelmiä maahantuovalle yritykselle, joka erikoistuu energiatehokkaisiin ratkaisuihin. Sisältää interaktiivisen energiansäästölaskurin ja kattavat tuotetiedot.",
+      "features": "Pääominaisuudet:",
+      "feature1": "Interaktiivinen energiansäästölaskuri",
+      "feature2": "Tuotekatalogi ja tekniset tiedot",
+      "feature3": "Responsiivinen suunnittelu kaikille laitteille",
+      "feature4": "Moderni käyttöliittymä sujuvilla animaatioilla",
+      "viewProject": "Katso sovellus"
+    },
+    "backToHome": "Takaisin etusivulle"
+  },
+  "Navigation": {
+    "about": "Tietoja",
+    "skills": "Taidot",
+    "portfolio": "Portfolio",
+    "contact": "Ota yhteyttä"
+  },
+  "ContactForm": {
+    "name": "Nimi",
+    "email": "Sähköposti",
+    "message": "Viesti",
+    "namePlaceholder": "Nimesi",
+    "emailPlaceholder": "sähköposti@esimerkki.com",
+    "messagePlaceholder": "Kerro sovelluksestasi...",
+    "send": "Lähetä viesti",
+    "sending": "Lähetetään...",
+    "success": "Viesti lähetetty!",
+    "successMessage": "Kiitos! Palaan asiaan pian.",
+    "error": "Jotain meni pieleen. Yritä uudelleen."
+  },
+  "Footer": {
+    "description": "Ammattimainen ohjelmistokehityspalvelut, jotka keskittyvät web-teknologioihin ja tekoälyyn.",
+    "quickLinks": "Pikalinkit",
+    "connect": "Yhteydenotot"
+  },
+  "Metadata": {
+    "layout": {
+      "title": "Ojala Solutions | Ohjelmistokehitys & Web-teknologiat",
+      "titleTemplate": "%s | Ojala Solutions",
+      "description": "Ammattimaiset ohjelmistokehityspalvelut Niilo Ojalalta. 3+ vuoden kokemus pankkiohjelmistosta, tekoälystä ja web-teknologioista. Erikoistunut Reactiin, Node.js:ään, TypeScriptiin ja pilvipalveluihin. Suomesta.",
+      "ogTitle": "Ojala Solutions | Ohjelmistokehitys & Web-teknologiat",
+      "ogDescription": "Ammattimaiset ohjelmistokehityspalvelut Niilo Ojalalta. 3+ vuoden kokemus pankkiohjelmistosta, tekoälystä ja web-teknologioista."
+    },
+    "home": {
+      "title": "Ojala Solutions | Ammattimainen ohjelmistokehityspalvelut",
+      "description": "Ammattimaiset ohjelmistokehityspalvelut Niilo Ojalalta. 3+ vuoden kokemus pankkiohjelmistosta, tekoälystä ja web-teknologioista. Erikoistunut Reactiin, Node.js:ään, TypeScriptiin ja pilvipalveluihin. Suomesta.",
+      "ogTitle": "Ojala Solutions | Ammattimainen ohjelmistokehityspalvelut",
+      "ogDescription": "Ammattimaiset ohjelmistokehityspalvelut Niilo Ojalalta. 3+ vuoden kokemus pankkiohjelmistosta, tekoälystä ja web-teknologioista."
+    },
+    "projects": {
+      "title": "Portfolio | Ojala Solutions - Case Studies & Työt",
+      "description": "Tutustu Niilo Ojalan portfolio-projekteihin: Approt.app (digitaaliset appro-passit) ja Isofan (energiatehokas LVI-järjestelmien yrityssivusto säästölaskurilla). Rakennettu Reactilla, Next.js:llä ja moderneilla web-teknologioilla.",
+      "ogTitle": "Portfolio | Ojala Solutions - Case Studies & Työt",
+      "ogDescription": "Tutustu Niilo Ojalan portfolio-projekteihin: Approt.app ja Isofan. Rakennettu Reactilla, Next.js:llä ja moderneilla web-teknologioilla."
+    }
+  },
+  "LocaleSwitcher": {
+    "label": "Kieli",
+    "locale": {
+      "fi": "Suomi",
+      "en": "Englanti"
+    }
+  }
+}
