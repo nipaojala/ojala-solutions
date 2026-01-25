@@ -1,7 +1,7 @@
 {
   "Home": {
     "hero": {
-      "tagline": "Ammattimaista web-kehitystä, jolla saat juuri oikean lopputuloksen.",
+      "tagline": "Räätälöityjä web-ratkaisuja juuri sinun tarpeisiin.",
       "getInTouch": "Ota yhteyttä",
       "learnMore": "Lue lisää"
     },
@@ -18,7 +18,7 @@
     },
     "contact": {
       "title": "Ota yhteyttä",
-      "subtitle": "Etsitkö ohjelmistoratkaisua yrityksellesi? Keskustellaan siitä, miten voin auttaa rakentamaan sovelluksesi."
+      "subtitle": "Keskustellaan siitä, miten voin auttaa toteuttamaan juuri sinun tarpeisiisi sopivan ratkaisun."
     }
   },
   "Projects": {
@@ -38,12 +38,12 @@
     "isofan": {
       "name": "Isofan",
       "tag": "Yrityssivusto",
-      "description": "Yrityssivusto LVI-järjestelmiä maahantuovalle yritykselle, joka erikoistuu energiatehokkaisiin ratkaisuihin. Sisältää interaktiivisen energiansäästölaskurin ja kattavat tuotetiedot.",
+      "description": "Yrityssivusto LVI-järjestelmiä maahantuovalle yritykselle, joka erikoistuu energiatehokkaisiin ratkaisuihin. Sisältää interaktiivisen energiansäästölaskurin, laajan hallintapaneelin ja tuotteet.",
       "features": "Pääominaisuudet:",
-      "feature1": "Interaktiivinen energiansäästölaskuri",
+      "feature1": "Kattava energiansäästölaskuri sisältäen PDF-tulosteen",
       "feature2": "Tuotekatalogi ja tekniset tiedot",
       "feature3": "Responsiivinen suunnittelu kaikille laitteille",
-      "feature4": "Moderni käyttöliittymä sujuvilla animaatioilla",
+      "feature4": "Hallintapaneeli tarjousten tekemiseen",
       "viewProject": "Katso sovellus"
     },
     "backToHome": "Takaisin etusivulle"

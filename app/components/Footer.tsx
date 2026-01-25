@@ -9,7 +9,7 @@ export default function Footer() {
   const t = useTranslations('Footer');
   const tNav = useTranslations('Navigation');
   return (
-    <footer className="bg-linear-to-br from-[#F0FFDF] to-[#FFD8DF] py-12 mt-20">
+    <footer className="bg-linear-to-br from-[#FFF2EF] to-[#FFF2EF] py-12 mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="animate-fade-in-up delay-100">
@@ -20,7 +20,7 @@ export default function Footer() {
                 width={32}
                 height={32}
               />
-              <span className="text-lg font-bold bg-linear-to-r from-[#FFAAB8] to-[#A8DF8E] bg-clip-text text-transparent">
+              <span className="text-lg font-bold bg-linear-to-r from-[#F7A5A5] to-[#1A2A4F] bg-clip-text text-transparent">
                 Ojala Solutions
               </span>
             </div>
@@ -34,7 +34,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/#about"
-                  className="text-gray-600 hover:text-[#FFAAB8] transition-colors text-sm"
+                  className="text-gray-600 hover:text-[#F7A5A5] transition-colors text-sm"
                 >
                   {tNav('about')}
                 </Link>
@@ -42,7 +42,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/#skills"
-                  className="text-gray-600 hover:text-[#FFAAB8] transition-colors text-sm"
+                  className="text-gray-600 hover:text-[#F7A5A5] transition-colors text-sm"
                 >
                   {tNav('skills')}
                 </Link>
@@ -50,7 +50,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/projects"
-                  className="text-gray-600 hover:text-[#FFAAB8] transition-colors text-sm"
+                  className="text-gray-600 hover:text-[#F7A5A5] transition-colors text-sm"
                 >
                   {tNav('portfolio')}
                 </Link>
@@ -58,7 +58,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/#contact"
-                  className="text-gray-600 hover:text-[#FFAAB8] transition-colors text-sm"
+                  className="text-gray-600 hover:text-[#F7A5A5] transition-colors text-sm"
                 >
                   {tNav('contact')}
                 </Link>
@@ -72,7 +72,7 @@ export default function Footer() {
                 href="https://github.com/nipaojala/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-600 hover:text-[#FFAAB8] transition-colors"
+                className="text-gray-600 hover:text-[#F7A5A5] transition-colors"
                 aria-label="GitHub"
               >
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -83,7 +83,7 @@ export default function Footer() {
                 href="https://www.linkedin.com/in/niilo-ojala-7ba5a3151/?originalSubdomain=fi"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-600 hover:text-[#FFAAB8] transition-colors"
+                className="text-gray-600 hover:text-[#F7A5A5] transition-colors"
                 aria-label="LinkedIn"
               >
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">

@@ -9,7 +9,7 @@ export default function MobileMenuButton({ isOpen, onClick }: MobileMenuButtonPr
   return (
     <button
       onClick={onClick}
-      className="md:hidden text-gray-700 hover:text-[#FFAAB8] transition-colors focus:outline-none z-70 relative w-6 h-6 flex items-center justify-center"
+      className="md:hidden text-gray-700 hover:text-[#F7A5A5] transition-colors focus:outline-none z-70 relative w-6 h-6 flex items-center justify-center"
       aria-label="Toggle menu"
       aria-expanded={isOpen}
     >

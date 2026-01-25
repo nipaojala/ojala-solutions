@@ -124,20 +124,20 @@ export default function Home({params}: LocaleLayoutProps) {
       <Header />
       
       {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center pt-20 bg-linear-to-br from-white via-[#F0FFDF] to-[#FFD8DF] relative overflow-hidden">
+      <section className="min-h-screen flex items-center justify-center pt-20 bg-linear-to-br from-white via-[#FFF2EF] to-[#FFF2EF] relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-[#A8DF8E] rounded-full blur-3xl"></div>
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#FFAAB8] rounded-full blur-3xl"></div>
+          <div className="absolute top-20 left-10 w-72 h-72 bg-[#1A2A4F] rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#F7A5A5] rounded-full blur-3xl"></div>
         </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 py-20 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="animate-fade-in-up delay-100">
+            <div className="animate-fade-in-up delay-100 min-w-0">
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-                <span className="bg-linear-to-r from-[#FFAAB8] to-[#A8DF8E] bg-clip-text text-transparent">
+                <span className="bg-linear-to-r from-[#F7A5A5] to-[#1A2A4F] bg-clip-text text-transparent">
                   Ojala Solutions
                 </span>
               </h1>
-              <p className="text-xl md:text-2xl text-gray-700 mb-8 leading-relaxed">
+              <p className="text-base md:text-lg lg:text-xl text-gray-700 mb-8 leading-relaxed min-w-0">
                 <Typewriter text={t('hero.tagline')} speed={30} />
               </p>
               <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up delay-300">
@@ -151,7 +151,7 @@ export default function Home({params}: LocaleLayoutProps) {
             </div>
             <div className="flex justify-center lg:justify-end animate-slide-in-right delay-100">
               <div className="relative w-full max-w-md">
-                <div className="absolute inset-0 bg-linear-to-r from-[#A8DF8E] to-[#FFAAB8] rounded-3xl transform rotate-3 blur-xl opacity-30"></div>
+                <div className="absolute inset-0 bg-linear-to-r from-[#1A2A4F] to-[#F7A5A5] rounded-3xl transform rotate-3 blur-xl opacity-30"></div>
                 <Image
                   src={logo}
                   alt="Ojala Solutions Logo"
@@ -171,7 +171,7 @@ export default function Home({params}: LocaleLayoutProps) {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="animate-fade-in-up delay-100">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              <span className="bg-linear-to-r from-[#FFAAB8] to-[#A8DF8E] bg-clip-text text-transparent">
+              <span className="bg-linear-to-r from-[#F7A5A5] to-[#1A2A4F] bg-clip-text text-transparent">
                 {t('about.title')}
               </span>
             </h2>
@@ -201,7 +201,7 @@ export default function Home({params}: LocaleLayoutProps) {
           </div>
           <div className="flex justify-center animate-slide-in-right delay-200">
             <div className="relative w-full max-w-sm">
-              <div className="absolute inset-0 bg-linear-to-r from-[#FFAAB8] to-[#A8DF8E] rounded-2xl transform -rotate-3 blur-xl opacity-20"></div>
+              <div className="absolute inset-0 bg-linear-to-r from-[#F7A5A5] to-[#1A2A4F] rounded-2xl transform -rotate-3 blur-xl opacity-20"></div>
               <Image
                 src={profilePic}
                 alt="Niilo Ojala"
@@ -218,7 +218,7 @@ export default function Home({params}: LocaleLayoutProps) {
       <Section id="skills" background="gradient">
         <div className="text-center mb-16 animate-fade-in-up delay-100">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="bg-linear-to-r from-[#FFAAB8] to-[#A8DF8E] bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-[#F7A5A5] to-[#1A2A4F] bg-clip-text text-transparent">
               {t('skills.title')}
             </span>
           </h2>
@@ -229,7 +229,7 @@ export default function Home({params}: LocaleLayoutProps) {
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 animate-fade-in-up delay-100 hover:scale-[1.02]">
-            <div className="w-12 h-12 bg-linear-to-r from-[#FFAAB8] to-[#A8DF8E] rounded-lg flex items-center justify-center mb-4">
+            <div className="w-12 h-12 bg-linear-to-r from-[#F7A5A5] to-[#1A2A4F] rounded-lg flex items-center justify-center mb-4">
               <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M12 0L2 7l10 7 10-7-10-7zm0 14L2 21l10 7 10-7-10-7z"/>
               </svg>
@@ -244,7 +244,7 @@ export default function Home({params}: LocaleLayoutProps) {
           </div>
 
           <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 animate-fade-in-up hover:scale-[1.02]">
-            <div className="w-12 h-12 bg-linear-to-r from-[#A8DF8E] to-[#FFAAB8] rounded-lg flex items-center justify-center mb-4">
+            <div className="w-12 h-12 bg-linear-to-r from-[#1A2A4F] to-[#F7A5A5] rounded-lg flex items-center justify-center mb-4">
               <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm-2 19v-2H6v-2h4V9H6V7h4V5h2v2h2V5h2v2h2v2h-2v6h2v2h-2v2h-2v-2h-2v2H10z"/>
               </svg>
@@ -259,7 +259,7 @@ export default function Home({params}: LocaleLayoutProps) {
           </div>
 
           <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 animate-fade-in-up hover:scale-[1.02]">
-            <div className="w-12 h-12 bg-linear-to-r from-[#FFAAB8] to-[#A8DF8E] rounded-lg flex items-center justify-center mb-4">
+            <div className="w-12 h-12 bg-linear-to-r from-[#F7A5A5] to-[#1A2A4F] rounded-lg flex items-center justify-center mb-4">
               <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 19c-3.859 0-7-3.141-7-7s3.141-7 7-7 7 3.141 7 7-3.141 7-7 7zm-1-10H9v2h2v6h2v-6h2V9h-4z"/>
               </svg>
@@ -274,7 +274,7 @@ export default function Home({params}: LocaleLayoutProps) {
           </div>
 
           <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 animate-fade-in-up hover:scale-[1.02]">
-            <div className="w-12 h-12 bg-linear-to-r from-[#FFAAB8] to-[#A8DF8E] rounded-lg flex items-center justify-center mb-4">
+            <div className="w-12 h-12 bg-linear-to-r from-[#F7A5A5] to-[#1A2A4F] rounded-lg flex items-center justify-center mb-4">
               <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
               </svg>
@@ -294,7 +294,7 @@ export default function Home({params}: LocaleLayoutProps) {
       <Section id="contact" background="white">
         <div className="text-center mb-12 animate-fade-in-up delay-100">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="bg-linear-to-r from-[#FFAAB8] to-[#A8DF8E] bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-[#F7A5A5] to-[#1A2A4F] bg-clip-text text-transparent">
               {t('contact.title')}
             </span>
           </h2>

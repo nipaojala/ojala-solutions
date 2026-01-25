@@ -87,7 +87,7 @@ export default function LocaleSwitcherSelect({
         type="button"
         onClick={() => setIsOpen(!isOpen)}
         disabled={isPending}
-        className={`relative flex items-center gap-2 px-4 py-2 rounded-full bg-white/90 hover:bg-white text-gray-700 font-medium transition-all duration-300 border border-gray-200 hover:border-[#FFAAB8] hover:shadow-md min-w-[100px] ${
+        className={`relative flex cursor-pointer items-center gap-2 px-4 py-2 rounded-full bg-white/90 hover:bg-white text-gray-700 font-medium transition-all duration-300 border border-gray-200 hover:border-[#F7A5A5] hover:shadow-md min-w-[100px] ${
           isPending ? 'opacity-50 cursor-not-allowed' : ''
         }`}
         aria-label={label}
@@ -107,22 +107,24 @@ export default function LocaleSwitcherSelect({
 
       {/* Dropdown Menu */}
       {isOpen && (
-        <div className="absolute top-full mt-2 right-0 bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden z-50 min-w-[100px] animate-fade-in">
+        <div className="absolute top-full mt-2 left-0 md:right-0 bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden z-50 min-w-[100px] animate-fade-in">
           <ul
             role="listbox"
-            className="py-1"
+            className=""
           >
-            {options.map((option) => {
+            {options.map((option, index) => {
               const isSelected = option.value === selectedValue;
+              const isFirst = index === 0;
+              const isLast = index === options.length - 1;
               return (
-                <li key={option.value} role="option">
+                <li key={option.value} role="option" className={isFirst ? 'pt-1' : isLast ? 'pb-1' : ''}>
                   <button
                     type="button"
                     onClick={() => handleSelect(option.value)}
                     className={`w-full text-left px-4 py-2 text-sm font-medium transition-all duration-200 ${
                       isSelected
-                        ? 'bg-linear-to-r from-[#FFAAB8] to-[#A8DF8E] text-white'
-                        : 'text-gray-700 hover:bg-[#F0FFDF]'
+                        ? 'bg-linear-to-r from-[#F7A5A5] to-[#1A2A4F] text-white'
+                        : 'text-gray-700 hover:bg-[#FFF2EF] hover:cursor-pointer'
                     }`}
                     aria-selected={isSelected}
                   >

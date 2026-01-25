@@ -1,7 +1,7 @@
 {
   "Home": {
     "hero": {
-      "tagline": "Professional web technologies that deliver the results you want.",
+      "tagline": "Tailored web solutions for your needs.",
       "getInTouch": "Get in Touch",
       "learnMore": "Learn More"
     },
@@ -18,7 +18,7 @@
     },
     "contact": {
       "title": "Get In Touch",
-      "subtitle": "Looking for a software solution for your company? Let's discuss how I can help build your application."
+      "subtitle": "Let's discuss how I can help implement a solution tailored to your needs."
     }
   },
   "Projects": {
@@ -38,12 +38,12 @@
     "isofan": {
       "name": "Isofan",
       "tag": "Corporate Website",
-      "description": "Company website for LVI systems importer specializing in energy-efficient solutions. Features an interactive energy savings calculator and comprehensive product information.",
+      "description": "Company website for an LVI systems importer specializing in energy-efficient solutions. Features an interactive energy-saving calculator, a comprehensive admin panel, and products.",
       "features": "Key Features:",
-      "feature1": "Interactive energy savings calculator",
+      "feature1": "Comprehensive energy-saving calculator with PDF export",
       "feature2": "Product catalog and specifications",
       "feature3": "Responsive design for all devices",
-      "feature4": "Modern UI with smooth animations",
+      "feature4": "Admin panel for creating quotes",
       "viewProject": "View Application"
     },
     "backToHome": "Back to Home"

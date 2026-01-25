@@ -22,11 +22,11 @@ export default function Button({
   
   const variantClasses = {
     primary:
-      'bg-linear-to-r from-[#FFAAB8] to-[#A8DF8E] text-white hover:opacity-90 shadow-lg hover:shadow-xl',
+      'bg-linear-to-r from-[#F7A5A5] to-[#1A2A4F] text-white hover:opacity-90 shadow-lg hover:shadow-xl',
     secondary:
-      'bg-linear-to-r from-[#A8DF8E] to-[#FFAAB8] text-white hover:opacity-90 shadow-lg hover:shadow-xl',
+      'bg-linear-to-r from-[#1A2A4F] to-[#F7A5A5] text-white hover:opacity-90 shadow-lg hover:shadow-xl',
     outline:
-      'border-2 border-[#FFAAB8] text-[#FFAAB8] hover:bg-[#FFAAB8] hover:text-white',
+      'border-2 border-[#F7A5A5] text-[#F7A5A5] hover:bg-[#F7A5A5] hover:text-white',
   };
 
   const classes = `${baseClasses} ${variantClasses[variant]} ${className}`;

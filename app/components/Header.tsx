@@ -14,25 +14,25 @@ export default async function Header() {
     <div className="hidden md:flex items-center space-x-8">
       <Link
         href="/#about"
-        className="text-gray-700 hover:text-[#FFAAB8] transition-colors font-medium"
+        className="text-gray-700 hover:text-[#F7A5A5] transition-colors font-medium"
       >
         {t('about')}
       </Link>
       <Link
         href="/#skills"
-        className="text-gray-700 hover:text-[#FFAAB8] transition-colors font-medium"
+        className="text-gray-700 hover:text-[#F7A5A5] transition-colors font-medium"
       >
         {t('skills')}
       </Link>
       <Link
         href="/projects"
-        className="text-gray-700 hover:text-[#FFAAB8] transition-colors font-medium"
+        className="text-gray-700 hover:text-[#F7A5A5] transition-colors font-medium"
       >
         {t('portfolio')}
       </Link>
       <Link
         href="/#contact"
-        className="bg-linear-to-r from-[#FFAAB8] to-[#A8DF8E] text-white px-6 py-2 rounded-full hover:opacity-90 transition-opacity font-medium"
+        className="bg-linear-to-r from-[#F7A5A5] to-[#1A2A4F] text-white px-6 py-2 rounded-full hover:opacity-90 transition-opacity font-medium"
       >
         {t('contact')}
       </Link>
@@ -54,7 +54,7 @@ export default async function Header() {
         priority
         
       />
-      <span className="text-xl font-bold bg-linear-to-r from-[#FFAAB8] to-[#A8DF8E] bg-clip-text text-transparent">
+      <span className="text-xl font-bold bg-linear-to-r from-[#F7A5A5] to-[#1A2A4F] bg-clip-text text-transparent">
         Ojala Solutions
       </span>
     </Link>
@@ -66,19 +66,19 @@ export default async function Header() {
       <nav className="space-y-6 mb-8">
         <Link
           href="/#about"
-          className="block text-gray-800 hover:text-[#FFAAB8] transition-colors font-medium text-lg py-2"
+          className="block text-gray-800 hover:text-[#F7A5A5] transition-colors font-medium text-lg py-2"
         >
           {t('about')}
         </Link>
         <Link
           href="/#skills"
-          className="block text-gray-800 hover:text-[#FFAAB8] transition-colors font-medium text-lg py-2"
+          className="block text-gray-800 hover:text-[#F7A5A5] transition-colors font-medium text-lg py-2"
         >
           {t('skills')}
         </Link>
         <Link
           href="/projects"
-          className="block text-gray-800 hover:text-[#FFAAB8] transition-colors font-medium text-lg py-2"
+          className="block text-gray-800 hover:text-[#F7A5A5] transition-colors font-medium text-lg py-2"
         >
           {t('portfolio')}
         </Link>
@@ -87,7 +87,7 @@ export default async function Header() {
       <div className="mb-8">
         <Link
           href="/#contact"
-          className="inline-block bg-linear-to-r from-[#FFAAB8] to-[#A8DF8E] text-white px-6 py-3 rounded-full hover:opacity-90 transition-opacity font-medium text-lg"
+          className="inline-block bg-linear-to-r from-[#F7A5A5] to-[#1A2A4F] text-white px-6 py-3 rounded-full hover:opacity-90 transition-opacity font-medium text-lg"
         >
           {t('contact')}
         </Link>
@@ -104,7 +104,7 @@ export default async function Header() {
             href="https://github.com/nipaojala/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-700 hover:text-[#FFAAB8] transition-colors"
+            className="text-gray-700 hover:text-[#F7A5A5] transition-colors"
             aria-label="GitHub"
           >
             <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
@@ -115,7 +115,7 @@ export default async function Header() {
             href="https://www.linkedin.com/in/niilo-ojala-7ba5a3151/?originalSubdomain=fi"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-700 hover:text-[#FFAAB8] transition-colors"
+            className="text-gray-700 hover:text-[#F7A5A5] transition-colors"
             aria-label="LinkedIn"
           >
             <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">

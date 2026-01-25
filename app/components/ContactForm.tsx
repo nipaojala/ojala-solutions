@@ -3,6 +3,7 @@
 import { useState, FormEvent } from 'react';
 import { useTranslations } from 'next-intl';
 import Button from './Button';
+import { sendContact } from '@/app/actions/sendContact';
 
 export default function ContactForm() {
   const t = useTranslations('ContactForm');
@@ -17,15 +18,20 @@ export default function ContactForm() {
     e.preventDefault();
     setStatus('sending');
 
-    // Simulate form submission (you can integrate with an API later)
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-    
-    // For now, just show success message
-    setStatus('success');
-    setFormData({ name: '', email: '', message: '' });
-    
-    // Reset status after 3 seconds
-    setTimeout(() => setStatus('idle'), 3000);
+    try {
+      const result = await sendContact(formData);
+      if (result.success) {
+        setStatus('success');
+        setFormData({ name: '', email: '', message: '' });
+        setTimeout(() => setStatus('idle'), 3000);
+      } else {
+        setStatus('error');
+        setTimeout(() => setStatus('idle'), 3000);
+      }
+    } catch {
+      setStatus('error');
+      setTimeout(() => setStatus('idle'), 3000);
+    }
   };
 
   const handleChange = (
@@ -50,7 +56,7 @@ export default function ContactForm() {
           value={formData.name}
           onChange={handleChange}
           required
-          className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#FFAAB8] focus:border-transparent transition-all outline-none"
+          className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#F7A5A5] focus:border-transparent transition-all outline-none"
           placeholder={t('namePlaceholder')}
         />
       </div>
@@ -65,7 +71,7 @@ export default function ContactForm() {
           value={formData.email}
           onChange={handleChange}
           required
-          className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#FFAAB8] focus:border-transparent transition-all outline-none"
+          className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#F7A5A5] focus:border-transparent transition-all outline-none"
           placeholder={t('emailPlaceholder')}
         />
       </div>
@@ -80,7 +86,7 @@ export default function ContactForm() {
           onChange={handleChange}
           required
           rows={6}
-          className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#FFAAB8] focus:border-transparent transition-all outline-none resize-none"
+          className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#F7A5A5] focus:border-transparent transition-all outline-none resize-none"
           placeholder={t('messagePlaceholder')}
         />
       </div>

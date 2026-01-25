@@ -13,7 +13,7 @@ export default function Section({
 }: SectionProps) {
   const backgroundClasses =
     background === 'gradient'
-      ? 'bg-gradient-to-br from-[#F0FFDF] to-[#FFD8DF]'
+      ? 'bg-gradient-to-br from-[#FFF2EF] to-[#FFF2EF]'
       : 'bg-white';
 
   return (

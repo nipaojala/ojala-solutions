@@ -76,7 +76,7 @@ export default function ImageGallery({ images, className = '', layout = 'grid' }
             return (
               <div
                 key={index}
-                className="relative h-48 bg-gray-100 rounded-2xl overflow-hidden cursor-pointer hover:scale-[1.02] transition-transform duration-300 border-2 border-transparent hover:border-[#FFAAB8]"
+                className="relative h-48 bg-gray-100 rounded-2xl overflow-hidden cursor-pointer hover:scale-[1.02] transition-transform duration-300 border-2 border-transparent hover:border-[#F7A5A5]"
                 onClick={() => setMainImageIndex(index)}
               >
                 <Image
