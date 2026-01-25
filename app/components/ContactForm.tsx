@@ -1,41 +1,43 @@
-'use client';
+"use client";
 
-import { useState, FormEvent } from 'react';
-import { useTranslations } from 'next-intl';
-import Button from './Button';
-import { sendContact } from '@/app/actions/sendContact';
+import { useState, FormEvent } from "react";
+import { useTranslations } from "next-intl";
+import Button from "./Button";
+import { sendContact } from "@/app/actions/sendContact";
 
 export default function ContactForm() {
-  const t = useTranslations('ContactForm');
+  const t = useTranslations("ContactForm");
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
+    name: "",
+    email: "",
+    message: "",
   });
-  const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
+  const [status, setStatus] = useState<
+    "idle" | "sending" | "success" | "error"
+  >("idle");
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setStatus('sending');
+    setStatus("sending");
 
     try {
       const result = await sendContact(formData);
       if (result.success) {
-        setStatus('success');
-        setFormData({ name: '', email: '', message: '' });
-        setTimeout(() => setStatus('idle'), 3000);
+        setStatus("success");
+        setFormData({ name: "", email: "", message: "" });
+        setTimeout(() => setStatus("idle"), 3000);
       } else {
-        setStatus('error');
-        setTimeout(() => setStatus('idle'), 3000);
+        setStatus("error");
+        setTimeout(() => setStatus("idle"), 3000);
       }
     } catch {
-      setStatus('error');
-      setTimeout(() => setStatus('idle'), 3000);
+      setStatus("error");
+      setTimeout(() => setStatus("idle"), 3000);
     }
   };
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     setFormData({
       ...formData,
@@ -46,8 +48,11 @@ export default function ContactForm() {
   return (
     <form onSubmit={handleSubmit} className="space-y-6 max-w-2xl mx-auto">
       <div className="animate-fade-in-up delay-100">
-        <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-          {t('name')}
+        <label
+          htmlFor="name"
+          className="block text-sm font-medium text-gray-700 mb-2"
+        >
+          {t("name")}
         </label>
         <input
           type="text"
@@ -57,12 +62,15 @@ export default function ContactForm() {
           onChange={handleChange}
           required
           className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#F7A5A5] focus:border-transparent transition-all outline-none"
-          placeholder={t('namePlaceholder')}
+          placeholder={t("namePlaceholder")}
         />
       </div>
       <div className="animate-fade-in-up delay-200">
-        <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-          {t('email')}
+        <label
+          htmlFor="email"
+          className="block text-sm font-medium text-gray-700 mb-2"
+        >
+          {t("email")}
         </label>
         <input
           type="email"
@@ -72,12 +80,15 @@ export default function ContactForm() {
           onChange={handleChange}
           required
           className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#F7A5A5] focus:border-transparent transition-all outline-none"
-          placeholder={t('emailPlaceholder')}
+          placeholder={t("emailPlaceholder")}
         />
       </div>
       <div className="animate-fade-in-up delay-300">
-        <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-          {t('message')}
+        <label
+          htmlFor="message"
+          className="block text-sm font-medium text-gray-700 mb-2"
+        >
+          {t("message")}
         </label>
         <textarea
           id="message"
@@ -87,27 +98,29 @@ export default function ContactForm() {
           required
           rows={6}
           className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#F7A5A5] focus:border-transparent transition-all outline-none resize-none"
-          placeholder={t('messagePlaceholder')}
+          placeholder={t("messagePlaceholder")}
         />
       </div>
       <div className="animate-fade-in-up delay-400">
         <Button
           type="submit"
           variant="primary"
-          className="w-full md:w-auto"
+          className="w-full md:w-auto cursor-pointer"
           onClick={undefined}
         >
-          {status === 'sending' ? t('sending') : status === 'success' ? t('success') : t('send')}
+          {status === "sending"
+            ? t("sending")
+            : status === "success"
+              ? t("success")
+              : t("send")}
         </Button>
-        {status === 'success' && (
+        {status === "success" && (
           <p className="mt-4 text-green-600 animate-fade-in">
-            {t('successMessage')}
+            {t("successMessage")}
           </p>
         )}
-        {status === 'error' && (
-          <p className="mt-4 text-red-600 animate-fade-in">
-            {t('error')}
-          </p>
+        {status === "error" && (
+          <p className="mt-4 text-red-600 animate-fade-in">{t("error")}</p>
         )}
       </div>
     </form>
