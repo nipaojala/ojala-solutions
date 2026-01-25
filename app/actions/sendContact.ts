@@ -1,19 +1,28 @@
-'use server';
+"use server";
+
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
 
 const MAILGUN_API_KEY = process.env.MAILGUN_API_KEY;
 const MAILGUN_DOMAIN = process.env.MAILGUN_DOMAIN;
 const MAILGUN_REGION = process.env.MAILGUN_REGION;
-const TO_EMAIL = 'nipa.ojala@gmail.com';
-const FROM_EMAIL = 'nipa.ojala';
-
-const MAILGUN_API_BASE =
-  MAILGUN_REGION === 'eu'
-    ? 'https://api.eu.mailgun.net'
-    : 'https://api.mailgun.net';
+const TO_EMAIL = "nipa.ojala@gmail.com";
+const TO_NAME = "Niilo Ojala";
+const FROM_NAME = "Ojala Solutions";
+const FROM_LOCAL = "yhteydenotto";
 
 export type SendContactResult =
   | { success: true }
   | { success: false; error: string };
+
+function getClient() {
+  const mailgun = new Mailgun(FormData);
+  return mailgun.client({
+    username: "api",
+    key: MAILGUN_API_KEY!,
+    ...(MAILGUN_REGION === "eu" && { url: "https://api.eu.mailgun.net" }),
+  });
+}
 
 export async function sendContact(formData: {
   name: string;
@@ -22,54 +31,45 @@ export async function sendContact(formData: {
 }): Promise<SendContactResult> {
   const { name, email, message } = formData;
 
-  if (!name || typeof name !== 'string' || !email || typeof email !== 'string' || !message || typeof message !== 'string') {
-    return { success: false, error: 'Missing or invalid name, email, or message' };
+  if (
+    !name ||
+    typeof name !== "string" ||
+    !email ||
+    typeof email !== "string" ||
+    !message ||
+    typeof message !== "string"
+  ) {
+    return {
+      success: false,
+      error: "Missing or invalid name, email, or message",
+    };
   }
 
   if (!MAILGUN_API_KEY || !MAILGUN_DOMAIN) {
-    return { success: false, error: 'Mailgun not configured' };
+    return { success: false, error: "Mailgun not configured" };
   }
 
-  const from = `${FROM_EMAIL}@${MAILGUN_DOMAIN}`;
+  const from = `${FROM_NAME} <${FROM_LOCAL}@${MAILGUN_DOMAIN}>`;
+  const to = [`${TO_NAME} <${TO_EMAIL}>`];
   const subject = `Ojala Solutions – uusi viesti: ${name}`;
   const text = [
     `Nimi: ${name}`,
     `Sähköposti: ${email}`,
-    '',
-    'Viesti:',
+    "",
+    "Viesti:",
     message,
-  ].join('\n');
-
-  const params = new URLSearchParams();
-  params.set('from', from);
-  params.set('to', TO_EMAIL);
-  params.set('subject', subject);
-  params.set('text', text);
-
-  const auth = Buffer.from(`api:${MAILGUN_API_KEY}`).toString('base64');
+  ].join("\n");
 
   try {
-    const res = await fetch(
-      `${MAILGUN_API_BASE}/v3/${MAILGUN_DOMAIN}/messages`,
-      {
-        method: 'POST',
-        headers: {
-          Authorization: `Basic ${auth}`,
-          'Content-Type': 'application/x-www-form-urlencoded',
-        },
-        body: params.toString(),
-      }
-    );
-
-    if (!res.ok) {
-      const err = await res.text();
-      console.error('Mailgun error:', res.status, err);
-      return { success: false, error: 'Failed to send email' };
-    }
-
+    await getClient().messages.create(MAILGUN_DOMAIN, {
+      from,
+      to,
+      subject,
+      text,
+    });
     return { success: true };
   } catch (e) {
-    console.error('Mailgun request failed:', e);
-    return { success: false, error: 'Failed to send email' };
+    console.error("Mailgun send failed:", e);
+    return { success: false, error: "Failed to send email" };
   }
 }
