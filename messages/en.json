@@ -1,29 +1,48 @@
 {
   "Home": {
     "hero": {
-      "tagline": "Tailored web solutions for your needs.",
-      "getInTouch": "Get in Touch",
-      "learnMore": "Learn More"
+      "tagline": "Websites and web apps – built for your needs",
+      "getInTouch": "Tell us what you need",
+      "learnMore": "Learn more"
     },
     "about": {
-      "title": "About Me",
-      "intro": "I'm <strong>Niilo Ojala</strong>, a {age} year-old software developer with {years} years of professional experience at software development.",
-      "journey": "My journey in software development has been driven by a passion for creating innovative solutions. I hold a major in <strong>Computer Science from Aalto University</strong>, where I specialized in web technologies.",
-      "experience": "My professional experience has focused on building scalable web applications. I completed my thesis at <strong>Osuuspankki on AI and banking software</strong>, combining AI and software development.",
-      "projects": "Beyond my professional work, I've completed countless personal projects that have helped me explore new technologies and expand my skill set."
+      "title": "About us",
+      "intro": "Ojala Solutions is finnish company that builds websites and web applications for companies and organisations in Finland. We focus on clear design, easy use, and customer needs.",
+      "whoFor": "We work with companies and organisations that need a new site or a custom web application.",
+      "founder": "Founder <strong>Niilo Ojala</strong> has solid experience in web development and real-world projects and a passion for software development."
     },
-    "skills": {
-      "title": "Skills & Technologies",
-      "subtitle": "These tools I have used in development"
+    "services": {
+      "title": "What We Do",
+      "websites": {
+        "title": "Websites",
+        "description": "All solutions are designed and built individually — without ready-made templates. Clear, fast and search-engine-friendly websites that are easy to develop further as your needs grow."
+      },
+      "webapps": {
+        "title": "Web Applications",
+        "description": "Custom web applications and tools. We build solutions tailored to your exact use case and users — nothing unnecessary, only what works."
+      },
+      "designSeo": {
+        "title": "Design & SEO",
+        "description": "Visual design, usability and discoverability combined into one cohesive whole. Every project starts with listening — goals, target audience and needs guide the final result."
+      }
+    },
+    "whyUs": {
+      "title": "Why Ojala Solutions?",
+      "technologyTitle": "Technology",
+      "technology": "Modern, fast, and secure solutions built to last.",
+      "seoTitle": "SEO",
+      "seo": "Great websites don’t help if no one finds them. Proper search engine optimization is always part of the design.",
+      "clientNeedsTitle": "Tailored to Your Needs",
+      "clientNeeds": "No ready-made packages. We build solutions around your goals."
     },
     "contact": {
-      "title": "Get In Touch",
-      "subtitle": "Let's discuss how I can help implement a solution tailored to your needs."
+      "title": "Let's talk about your project",
+      "subtitle": "Share your goals and ideas – you don't need to know exactly what you want. We'll reply soon and with no obligation."
     }
   },
   "Projects": {
     "title": "Portfolio",
-    "subtitle": "Showcase of my applications",
+    "subtitle": "Showcase of applications",
     "approt": {
       "name": "Approt.app",
       "tag": "Web App",
@@ -33,7 +52,11 @@
       "feature2": "Real-time event tracking and analytics",
       "feature3": "Interactive maps with location tracking",
       "feature4": "Admin dashboard for event organizers",
-      "viewProject": "View Application"
+      "viewProject": "View Application",
+      "tag1": "Event app",
+      "tag2": "Mobile",
+      "tag3": "Real-time",
+      "tag4": "Admin dashboard"
     },
     "isofan": {
       "name": "Isofan",
@@ -44,13 +67,17 @@
       "feature2": "Product catalog and specifications",
       "feature3": "Responsive design for all devices",
       "feature4": "Admin panel for creating quotes",
-      "viewProject": "View Application"
+      "viewProject": "View Application",
+      "tag1": "Company website",
+      "tag2": "Energy calculator",
+      "tag3": "Product catalog",
+      "tag4": "Responsive"
     },
     "backToHome": "Back to Home"
   },
   "Navigation": {
     "about": "About",
-    "skills": "Skills",
+    "services": "Services",
     "portfolio": "Portfolio",
     "contact": "Contact"
   },
@@ -60,31 +87,31 @@
     "message": "Message",
     "namePlaceholder": "Your name",
     "emailPlaceholder": "your.email@example.com",
-    "messagePlaceholder": "Tell me about your application...",
+    "messagePlaceholder": "Tell us about your project...",
     "send": "Send Message",
     "sending": "Sending...",
     "success": "Message Sent!",
-    "successMessage": "Thank you! I'll get back to you soon.",
+    "successMessage": "Thank you! We'll get back to you soon.",
     "error": "Something went wrong. Please try again."
   },
   "Footer": {
-    "description": "Professional software development services with a focus on web technologies and AI.",
+    "description": "Websites and web apps – built for your needs.",
     "quickLinks": "Quick Links",
     "connect": "Connect"
   },
   "Metadata": {
     "layout": {
-      "title": "Ojala Solutions | Software Development & Web Technologies",
+      "title": "Ojala Solutions | Websites and web apps for businesses",
       "titleTemplate": "%s | Ojala Solutions",
-      "description": "Professional software development services by Niilo Ojala. 3+ years of experience in banking software, AI, and web technologies. Specialized in React, Node.js, TypeScript, and cloud services. Based in Finland.",
-      "ogTitle": "Ojala Solutions | Software Development & Web Technologies",
-      "ogDescription": "Professional software development services by Niilo Ojala. 3+ years of experience in banking software, AI, and web technologies."
+      "description": "Websites and web applications for companies and organisations. Latest technology, SEO, and a solution made for your needs. Based in Finland.",
+      "ogTitle": "Ojala Solutions | Websites and web apps for businesses",
+      "ogDescription": "Websites and web apps for businesses. Latest technology, SEO, and a solution made for your needs."
     },
     "home": {
-      "title": "Ojala Solutions | Professional Software Development Services",
-      "description": "Professional software development services by Niilo Ojala. 3+ years of experience in banking software, AI, and web technologies. Specialized in React, Node.js, TypeScript, and cloud services. Based in Finland.",
-      "ogTitle": "Ojala Solutions | Professional Software Development Services",
-      "ogDescription": "Professional software development services by Niilo Ojala. 3+ years of experience in banking software, AI, and web technologies."
+      "title": "Ojala Solutions | Websites and web apps for businesses",
+      "description": "Ojala Solutions designs and builds websites and web applications for companies and organisations. Latest technology, SEO, and a solution made for your needs. Based in Finland.",
+      "ogTitle": "Ojala Solutions | Websites and web apps for businesses",
+      "ogDescription": "Websites and web apps for businesses. Latest technology, SEO, and a solution made for your needs."
     },
     "projects": {
       "title": "Portfolio | Ojala Solutions - Case Studies & Work",

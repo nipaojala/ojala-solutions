@@ -1,24 +1,43 @@
 {
   "Home": {
     "hero": {
-      "tagline": "Räätälöityjä web-ratkaisuja juuri sinun tarpeisiin.",
-      "getInTouch": "Ota yhteyttä",
+      "tagline": "Räätälöidyt nettisivut ja web-sovellukset - juuri sinun tarpeisiisi.",
+      "getInTouch": "Kerro tarpeesi",
       "learnMore": "Lue lisää"
     },
     "about": {
-      "title": "Tietoja minusta",
-      "intro": "Olen <strong>Niilo Ojala</strong>, {age} vuoden ikäinen ohjelmistokehittäjä, jolla on {years} vuoden ammattimainen kokemus ohjelmistokehityksestä.",
-      "journey": "Matkani ohjelmistokehityksessä on ohjannut intohimo luoda innovatiivisia ratkaisuja. Minulla oli pääaineena <strong>tietojenkäsittelytiede Aalto-yliopistosta</strong>, jossa erikoistuin web-teknologioihin.",
-      "experience": "Olen keskittynyt skaalautuvien web-sovellusten rakentamiseen. Suoritin lopputyöni <strong>Osuuspankissa tekoälystä ja pankkiohjelmistosta</strong>, yhdistäen tekoälyn ja ohjelmistokehityksen.",
-      "projects": "Ammattimaisen työni lisäksi olen tehnyt monia henkilökohtaisia projekteja, jotka ovat auttaneet minua tutustumaan uusiin teknologioihin ja laajentamaan taitojani."
+      "title": "Tietoja meistä",
+      "intro": "Ojala Solutions on suomalainen toimija, joka tekee nettisivuja ja web-sovelluksia yrityksille ja yhdistyksille. Tavoitteena on selkeä ulkoasu, helppo käyttö ja asiakkaan kuunteleminen.",
+      "whoFor": "Työskentelemme yritysten ja yhdistysten kanssa, jotka tarvitsevat uuden sivuston tai räätälöidyn web-sovelluksen.",
+      "founder": "Perustajalla <strong>Niilo Ojalalla</strong> on vahva kokemus web-kehityksestä ja käytännön projekteista sekä intohimo sovelluskehittämiseen."
     },
-    "skills": {
-      "title": "Taidot ja teknologiat",
-      "subtitle": "Näitä työkaluja olen käyttänyt kehittämisessä."
+    "services": {
+      "title": "Mitä teemme",
+      "websites": {
+        "title": "Nettisivut",
+        "description": "Kaikki ratkaisut suunnitellaan ja toteutetaan yksilöllisesti – ilman valmiita pohjia. Selkeät, nopeat ja hakukoneystävälliset sivut, jotka on helppo jatkokehittää tarpeidesi mukaan."
+      },
+      "webapps": {
+        "title": "Web-sovellukset",
+        "description": "Räätälöidyt web-sovellukset ja työkalut. Rakennamme ratkaisut juuri sinun käyttötarkoitukseesi ja käyttäjillesi – ei turhaa, vain toimivaa."
+      },
+      "designSeo": {
+        "title": "Suunnittelu ja SEO",
+        "description": "Ulkoasu, käytettävyys ja löydettävyys yhdessä kokonaisuudessa. Jokainen projekti alkaa kuuntelulla: tavoitteet, kohderyhmä ja tarpeet ohjaavat lopputulosta."
+      }
+    },
+    "whyUs": {
+      "title": "Miksi Ojala Solutions?",
+      "technologyTitle": "Teknologia",
+      "technology": "Modernit, nopeat ja turvalliset ratkaisut, jotka kestävät aikaa.",
+      "seoTitle": "SEO",
+      "seo": "Hyvät sivut eivät auta, jos kukaan ei niitä löydä. Suunnitteluun kuuluu aina oikeanlainen hakukoneoptimointi.",
+      "clientNeedsTitle": "Juuri sinun tarpeet",
+      "clientNeeds": "Ei valmiita paketteja. Rakennamme ratkaisun sinun tavoitteidesi mukaan."
     },
     "contact": {
-      "title": "Ota yhteyttä",
-      "subtitle": "Keskustellaan siitä, miten voin auttaa toteuttamaan juuri sinun tarpeisiisi sopivan ratkaisun."
+      "title": "Keskustellaan projektistasi",
+      "subtitle": "Kerro tavoitteistasi ja ajatuksistasi – ei tarvitse tietää tarkasti, mitä haluat. Vastaamme pian ja ilman sitoumuksia."
     }
   },
   "Projects": {
@@ -33,7 +52,11 @@
       "feature2": "Reaaliaikainen tapahtumaseuranta ja analytiikka",
       "feature3": "Interaktiiviset kartat sijaintiseurannalla",
       "feature4": "Hallintapaneeli tapahtuman järjestäjille",
-      "viewProject": "Katso sovellus"
+      "viewProject": "Katso sovellus",
+      "tag1": "Tapahtumasovellus",
+      "tag2": "Mobiili",
+      "tag3": "Reaaliaika",
+      "tag4": "Hallintapaneeli"
     },
     "isofan": {
       "name": "Isofan",
@@ -44,13 +67,17 @@
       "feature2": "Tuotekatalogi ja tekniset tiedot",
       "feature3": "Responsiivinen suunnittelu kaikille laitteille",
       "feature4": "Hallintapaneeli tarjousten tekemiseen",
-      "viewProject": "Katso sovellus"
+      "viewProject": "Katso sovellus",
+      "tag1": "Yrityssivusto",
+      "tag2": "Energialaskuri",
+      "tag3": "Tuotekatalogi",
+      "tag4": "Responsiivinen"
     },
     "backToHome": "Takaisin etusivulle"
   },
   "Navigation": {
     "about": "Tietoja",
-    "skills": "Taidot",
+    "services": "Palvelut",
     "portfolio": "Portfolio",
     "contact": "Ota yhteyttä"
   },
@@ -60,31 +87,31 @@
     "message": "Viesti",
     "namePlaceholder": "Nimesi",
     "emailPlaceholder": "sähköposti@esimerkki.com",
-    "messagePlaceholder": "Kerro sovelluksestasi...",
+    "messagePlaceholder": "Kerro projektistasi...",
     "send": "Lähetä viesti",
     "sending": "Lähetetään...",
     "success": "Viesti lähetetty!",
-    "successMessage": "Kiitos! Palaan asiaan pian.",
+    "successMessage": "Kiitos! Palaamme asiaan pian.",
     "error": "Jotain meni pieleen. Yritä uudelleen."
   },
   "Footer": {
-    "description": "Ammattimaista web-kehitystä, jolla saat juuri oikean lopputuloksen.",
+    "description": "Räätälöidyt nettisivut ja web-sovellukset - juuri sinun tarpeisiisi.",
     "quickLinks": "Pikalinkit",
     "connect": "Yhteydenotot"
   },
   "Metadata": {
     "layout": {
-      "title": "Ojala Solutions | Ohjelmistokehitys & Web-teknologiat",
+      "title": "Ojala Solutions | Nettisivut ja web-sovellukset yrityksille",
       "titleTemplate": "%s | Ojala Solutions",
-      "description": "Ammattimaiset ohjelmistokehityspalvelut Niilo Ojalalta. 3+ vuoden kokemus ohjelmistokehityksestä, tekoälystä ja web-teknologioista. Erikoistunut Reactiin, Node.js:ään, TypeScriptiin ja pilvipalveluihin. Suomesta.",
-      "ogTitle": "Ojala Solutions | Ohjelmistokehitys & Web-teknologiat",
-      "ogDescription": "Ammattimaiset ohjelmistokehityspalvelut Niilo Ojalalta. 3+ vuoden kokemus ohjelmistokehityksestä, tekoälystä ja web-teknologioista."
+      "description": "Nettisivut ja web-sovellukset yrityksille ja yhdistyksille. Uusin teknologia, SEO ja ratkaisu juuri sinun tarpeisiisi. Suomesta.",
+      "ogTitle": "Ojala Solutions | Nettisivut ja web-sovellukset yrityksille",
+      "ogDescription": "Nettisivut ja web-sovellukset yrityksille. Uusin teknologia, SEO ja ratkaisu juuri sinun tarpeisiisi."
     },
     "home": {
-      "title": "Ojala Solutions | Ammattimaiset ohjelmistokehityspalvelut",
-      "description": "Ammattimaiset ohjelmistokehityspalvelut Niilo Ojalalta. 3+ vuoden kokemus ohjelmistokehityksestä, tekoälystä ja web-teknologioista. Erikoistunut Reactiin, Node.js:ään, TypeScriptiin ja pilvipalveluihin. Suomesta.",
-      "ogTitle": "Ojala Solutions | Ammattimaiset ohjelmistokehityspalvelut",
-      "ogDescription": "Ammattimaiset ohjelmistokehityspalvelut Niilo Ojalalta. 3+ vuoden kokemus ohjelmistokehityksestä, tekoälystä ja web-teknologioista."
+      "title": "Ojala Solutions | Nettisivut ja web-sovellukset yrityksille",
+      "description": "Ojala Solutions suunnittelee ja rakentaa nettisivuja ja web-sovelluksia yrityksille ja yhdistyksille. Uusin teknologia, SEO ja ratkaisu juuri sinun tarpeisiisi. Suomesta.",
+      "ogTitle": "Ojala Solutions | Nettisivut ja web-sovellukset yrityksille",
+      "ogDescription": "Nettisivut ja web-sovellukset yrityksille. Uusin teknologia, SEO ja ratkaisu juuri sinun tarpeisiisi."
     },
     "projects": {
       "title": "Portfolio | Ojala Solutions - Case Studies & Työt",

@@ -166,18 +166,14 @@ export default function ProjectsPage({ params }: LocaleLayoutProps) {
                     </ul>
                   </div>
                   <div className="flex flex-wrap gap-3 mb-6">
-                    <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-medium">
-                      React
-                    </span>
-                    <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-medium">
-                      Next.js
-                    </span>
-                    <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-medium">
-                      TypeScript
-                    </span>
-                    <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-medium">
-                      Web App
-                    </span>
+                    {[1, 2, 3, 4].map((i) => (
+                      <span
+                        key={i}
+                        className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-medium"
+                      >
+                        {t(`approt.tag${i}`)}
+                      </span>
+                    ))}
                   </div>
                   <div className="flex gap-4">
                     <a
@@ -243,18 +239,14 @@ export default function ProjectsPage({ params }: LocaleLayoutProps) {
                     </ul>
                   </div>
                   <div className="flex flex-wrap gap-3 mb-6">
-                    <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-medium">
-                      React
-                    </span>
-                    <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-medium">
-                      Next.js
-                    </span>
-                    <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-medium">
-                      TypeScript
-                    </span>
-                    <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-medium">
-                      Calculator
-                    </span>
+                    {[1, 2, 3, 4].map((i) => (
+                      <span
+                        key={i}
+                        className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-medium"
+                      >
+                        {t(`isofan.tag${i}`)}
+                      </span>
+                    ))}
                   </div>
                   <div className="flex gap-4">
                     <a

@@ -33,22 +33,19 @@ export async function generateMetadata(
     },
     description: t("description"),
     keywords: [
-      "software development",
+      "nettisivut",
+      "web-sovellukset",
+      "yrityssivut",
+      "websites",
+      "web apps",
+      "companies",
       "web development",
       "React",
       "Next.js",
-      "Node.js",
       "TypeScript",
-      "banking software",
-      "AI",
-      "cloud services",
-      "AWS",
+      "SEO",
       "Ojala Solutions",
-      "Niilo Ojala",
-      "Finland developer",
-      "frontend developer",
-      "backend developer",
-      "full stack developer",
+      "Finland",
     ],
     authors: [{ name: "Niilo Ojala" }],
     creator: "Niilo Ojala",
@@ -102,26 +99,6 @@ export default function Home({ params }: LocaleLayoutProps) {
   setRequestLocale(locale as Locale);
   const t = useTranslations("Home");
 
-  const birthYear = 1997;
-  const birthMonth = 6;
-  const birthDay = 9;
-
-  const now = new Date();
-  const currentYear = now.getFullYear();
-  const currentMonth = now.getMonth();
-  const currentDay = now.getDate();
-
-  let age = currentYear - birthYear;
-  if (
-    currentMonth < birthMonth ||
-    (currentMonth === birthMonth && currentDay < birthDay)
-  ) {
-    age -= 1;
-  }
-
-  const experienceStartYear = 2023;
-  const yearsOfExperience = currentYear - experienceStartYear;
-
   return (
     <div className="min-h-screen">
       <Header />
@@ -129,7 +106,6 @@ export default function Home({ params }: LocaleLayoutProps) {
       {/* Hero Section */}
       <section className="min-h-screen flex items-center justify-center pt-20 bg-linear-to-br from-white via-[#FFF2EF] to-[#FFF2EF] relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-[#1A2A4F] rounded-full blur-3xl"></div>
           <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#F7A5A5] rounded-full blur-3xl"></div>
         </div>
         <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 py-20 relative z-10">
@@ -141,8 +117,9 @@ export default function Home({ params }: LocaleLayoutProps) {
                 </span>
               </h1>
               <p className="text-base md:text-lg lg:text-xl text-gray-700 mb-8 leading-relaxed min-w-0">
-                <Typewriter text={t("hero.tagline")} speed={30} />
+                <Typewriter text={t("hero.tagline")} speed={20} />
               </p>
+
               <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up delay-300">
                 <Button href="#contact" variant="primary">
                   {t("hero.getInTouch")}
@@ -179,24 +156,13 @@ export default function Home({ params }: LocaleLayoutProps) {
               </span>
             </h2>
             <div className="space-y-4 text-gray-700 leading-relaxed">
+              <p className="text-lg">{t("about.intro")}</p>
+              <p className="text-lg">{t("about.whoFor")}</p>
               <p className="text-lg">
-                {t.rich("about.intro", {
-                  age,
-                  years: yearsOfExperience,
+                {t.rich("about.founder", {
                   strong: (chunks) => <strong>{chunks}</strong>,
                 })}
               </p>
-              <p className="text-lg">
-                {t.rich("about.journey", {
-                  strong: (chunks) => <strong>{chunks}</strong>,
-                })}
-              </p>
-              <p className="text-lg">
-                {t.rich("about.experience", {
-                  strong: (chunks) => <strong>{chunks}</strong>,
-                })}
-              </p>
-              <p className="text-lg">{t("about.projects")}</p>
             </div>
           </div>
           <div className="flex justify-center animate-slide-in-right delay-200">
@@ -214,20 +180,17 @@ export default function Home({ params }: LocaleLayoutProps) {
         </div>
       </Section>
 
-      {/* Skills Section */}
-      <Section id="skills" background="gradient">
-        <div className="text-center mb-16 animate-fade-in-up delay-100">
+      {/* Services Section */}
+      <Section id="services" background="gradient">
+        <div className="text-center mb-12 animate-fade-in-up delay-100">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             <span className="bg-linear-to-r from-[#F7A5A5] to-[#1A2A4F] bg-clip-text text-transparent">
-              {t("skills.title")}
+              {t("services.title")}
             </span>
           </h2>
-          <p className="text-xl text-gray-700 max-w-2xl mx-auto">
-            {t("skills.subtitle")}
-          </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
           <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 animate-fade-in-up delay-100 hover:scale-[1.02]">
             <div className="w-12 h-12 bg-linear-to-r from-[#F7A5A5] to-[#1A2A4F] rounded-lg flex items-center justify-center mb-4">
               <svg
@@ -235,77 +198,78 @@ export default function Home({ params }: LocaleLayoutProps) {
                 fill="currentColor"
                 viewBox="0 0 24 24"
               >
-                <path d="M12 0L2 7l10 7 10-7-10-7zm0 14L2 21l10 7 10-7-10-7z" />
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
               </svg>
             </div>
-            <h3 className="text-xl font-bold mb-3 text-gray-800">Frontend</h3>
-            <ul className="space-y-2 text-gray-600">
-              <li>• React</li>
-              <li>• Next.js</li>
-              <li>• TypeScript</li>
-              <li>• HTML5 & CSS3</li>
-            </ul>
+            <h3 className="text-xl font-bold mb-3 text-gray-800">
+              {t("services.websites.title")}
+            </h3>
+            <p className="text-gray-600">
+              {t("services.websites.description")}
+            </p>
           </div>
 
-          <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 animate-fade-in-up hover:scale-[1.02]">
+          <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 animate-fade-in-up delay-200 hover:scale-[1.02]">
             <div className="w-12 h-12 bg-linear-to-r from-[#1A2A4F] to-[#F7A5A5] rounded-lg flex items-center justify-center mb-4">
               <svg
                 className="w-6 h-6 text-white"
                 fill="currentColor"
                 viewBox="0 0 24 24"
               >
-                <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm-2 19v-2H6v-2h4V9H6V7h4V5h2v2h2V5h2v2h2v2h-2v6h2v2h-2v2h-2v-2h-2v2H10z" />
+                <path d="M20 18c1.1 0 1.99-.9 1.99-2L22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2H0v2h24v-2h-4zM4 6h16v10H4V6z" />
               </svg>
             </div>
-            <h3 className="text-xl font-bold mb-3 text-gray-800">Backend</h3>
-            <ul className="space-y-2 text-gray-600">
-              <li>• Node.js</li>
-              <li>• RESTful APIs</li>
-              <li>• Database Design</li>
-              <li>• Server Architecture</li>
-            </ul>
+            <h3 className="text-xl font-bold mb-3 text-gray-800">
+              {t("services.webapps.title")}
+            </h3>
+            <p className="text-gray-600">{t("services.webapps.description")}</p>
           </div>
 
-          <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 animate-fade-in-up hover:scale-[1.02]">
+          <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 animate-fade-in-up delay-300 hover:scale-[1.02]">
             <div className="w-12 h-12 bg-linear-to-r from-[#F7A5A5] to-[#1A2A4F] rounded-lg flex items-center justify-center mb-4">
               <svg
                 className="w-6 h-6 text-white"
                 fill="currentColor"
                 viewBox="0 0 24 24"
               >
-                <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 19c-3.859 0-7-3.141-7-7s3.141-7 7-7 7 3.141 7 7-3.141 7-7 7zm-1-10H9v2h2v6h2v-6h2V9h-4z" />
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1.41 16.09V20h-2.67v-1.93c-1.71-.36-3.16-1.46-3.27-3.4h1.96c.1 1.05.82 1.87 2.65 1.87 1.96 0 2.4-.98 2.4-1.59 0-.83-.44-1.61-2.67-2.14-2.48-.6-4.18-1.62-4.18-3.67 0-1.72 1.39-2.84 3.11-3.21V4h2.67v1.95c1.86.45 2.79 1.86 2.85 3.39H14.3c-.05-1.11-.64-1.87-2.22-1.87-1.5 0-2.4.68-2.4 1.64 0 .84.65 1.39 2.67 1.91s4.18 1.39 4.18 3.91c-.01 1.83-1.38 2.83-3.12 3.16z" />
               </svg>
             </div>
             <h3 className="text-xl font-bold mb-3 text-gray-800">
-              Cloud & DevOps
+              {t("services.designSeo.title")}
             </h3>
-            <ul className="space-y-2 text-gray-600">
-              <li>• AWS</li>
-              <li>• Docker</li>
-              <li>• CI/CD</li>
-              <li>• Cloud Services</li>
-            </ul>
+            <p className="text-gray-600">
+              {t("services.designSeo.description")}
+            </p>
           </div>
+        </div>
 
-          <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 animate-fade-in-up hover:scale-[1.02]">
-            <div className="w-12 h-12 bg-linear-to-r from-[#F7A5A5] to-[#1A2A4F] rounded-lg flex items-center justify-center mb-4">
-              <svg
-                className="w-6 h-6 text-white"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-              </svg>
+        {/* Why us */}
+        <div>
+          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
+            <span className="bg-linear-to-r from-[#F7A5A5] to-[#1A2A4F] bg-clip-text text-transparent">
+              {t("whyUs.title")}
+            </span>
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-white/80 backdrop-blur p-6 rounded-2xl">
+              <h3 className="font-semibold text-gray-800 mb-2">
+                {t("whyUs.technologyTitle")}
+              </h3>
+              <p className="text-gray-600">{t("whyUs.technology")}</p>
             </div>
-            <h3 className="text-xl font-bold mb-3 text-gray-800">
-              Tools & Practices
-            </h3>
-            <ul className="space-y-2 text-gray-600">
-              <li>• Git & GitHub</li>
-              <li>• Agile</li>
-              <li>• Testing</li>
-              <li>• Jira & Confluence</li>
-            </ul>
+            <div className="bg-white/80 backdrop-blur p-6 rounded-2xl">
+              <h3 className="font-semibold text-gray-800 mb-2">
+                {t("whyUs.seoTitle")}
+              </h3>
+              <p className="text-gray-600">{t("whyUs.seo")}</p>
+            </div>
+            <div className="bg-white/80 backdrop-blur p-6 rounded-2xl">
+              <h3 className="font-semibold text-gray-800 mb-2">
+                {t("whyUs.clientNeedsTitle")}
+              </h3>
+              <p className="text-gray-600">{t("whyUs.clientNeeds")}</p>
+            </div>
           </div>
         </div>
       </Section>
