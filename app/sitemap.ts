@@ -1,40 +1,57 @@
 import { MetadataRoute } from 'next';
-import { routing } from './i18n/routing';
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  // Use ONE canonical host consistently (avoid www/non-www duplicates)
   const baseUrl = 'https://ojala-solutions.fi';
-  
-  // Get all routes
-  const routes = [
-    '', // Home page
-    '/projects', // Projects page
-  ];
+  const lastModified = new Date();
 
-  // Generate sitemap entries for each route and locale
-  const sitemapEntries: MetadataRoute.Sitemap = [];
+  // Hand-written routes (explicit URLs)
+  return [
+    // Root
+    { url: baseUrl, lastModified },
 
-  for (const route of routes) {
-    const urls = routing.locales.map((locale) => `${baseUrl}/${locale}${route}`);
-    
-    // Add each locale version with alternates
-    for (const locale of routing.locales) {
-      sitemapEntries.push({
-        url: `${baseUrl}/${locale}${route}`,
-        lastModified: new Date(),
-        alternates: {
-          languages: Object.fromEntries(
-            routing.locales.map((loc) => [loc, `${baseUrl}/${loc}${route}`])
-          ),
+    // Home
+    {
+      url: `${baseUrl}/fi`,
+      lastModified,
+      alternates: {
+        languages: {
+          fi: `${baseUrl}/fi`,
+          en: `${baseUrl}/en`,
         },
-      });
-    }
-  }
+      },
+    },
+    {
+      url: `${baseUrl}/en`,
+      lastModified,
+      alternates: {
+        languages: {
+          fi: `${baseUrl}/fi`,
+          en: `${baseUrl}/en`,
+        },
+      },
+    },
 
-  // Add root URL (might redirect to /fi)
-  sitemapEntries.push({
-    url: baseUrl,
-    lastModified: new Date(),
-  });
-
-  return sitemapEntries;
+    // Projects
+    {
+      url: `${baseUrl}/fi/projects`,
+      lastModified,
+      alternates: {
+        languages: {
+          fi: `${baseUrl}/fi/projects`,
+          en: `${baseUrl}/en/projects`,
+        },
+      },
+    },
+    {
+      url: `${baseUrl}/en/projects`,
+      lastModified,
+      alternates: {
+        languages: {
+          fi: `${baseUrl}/fi/projects`,
+          en: `${baseUrl}/en/projects`,
+        },
+      },
+    },
+  ];
 }
