@@ -1,2 +1,4 @@
 User-Agent: *
 Allow: *
+
+Sitemap: https://ojala-solutions.fi/sitemap.xml

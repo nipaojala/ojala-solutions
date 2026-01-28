@@ -88,6 +88,10 @@
     "namePlaceholder": "Nimesi",
     "emailPlaceholder": "sähköposti@esimerkki.com",
     "messagePlaceholder": "Kerro projektistasi...",
+    "validation": {
+      "required": "Täytä tämä kenttä.",
+      "invalidEmail": "Anna kelvollinen sähköpostiosoite."
+    },
     "send": "Lähetä viesti",
     "sending": "Lähetetään...",
     "success": "Viesti lähetetty!",
@@ -101,23 +105,23 @@
   },
   "Metadata": {
     "layout": {
-      "title": "Ojala Solutions | Nettisivut ja web-sovellukset yrityksille",
+      "title": "Ojala Solutions | Räätälöidyt nettisivut ja web-sovellukset",
       "titleTemplate": "%s | Ojala Solutions",
-      "description": "Nettisivut ja web-sovellukset yrityksille ja yhdistyksille. Uusin teknologia, SEO ja ratkaisu juuri sinun tarpeisiisi. Suomesta.",
-      "ogTitle": "Ojala Solutions | Nettisivut ja web-sovellukset yrityksille",
-      "ogDescription": "Nettisivut ja web-sovellukset yrityksille. Uusin teknologia, SEO ja ratkaisu juuri sinun tarpeisiisi."
+      "description": "Räätälöidyt nettisivut ja web-sovellukset yrityksille ja yhdistyksille. Selkeät, nopeat ja hakukoneystävälliset ratkaisut – juuri sinun tarpeisiisi. Suomesta.",
+      "ogTitle": "Ojala Solutions | Räätälöidyt nettisivut ja web-sovellukset",
+      "ogDescription": "Räätälöidyt nettisivut ja web-sovellukset – juuri sinun tarpeisiisi."
     },
     "home": {
-      "title": "Ojala Solutions | Nettisivut ja web-sovellukset yrityksille",
-      "description": "Ojala Solutions suunnittelee ja rakentaa nettisivuja ja web-sovelluksia yrityksille ja yhdistyksille. Uusin teknologia, SEO ja ratkaisu juuri sinun tarpeisiisi. Suomesta.",
-      "ogTitle": "Ojala Solutions | Nettisivut ja web-sovellukset yrityksille",
-      "ogDescription": "Nettisivut ja web-sovellukset yrityksille. Uusin teknologia, SEO ja ratkaisu juuri sinun tarpeisiisi."
+      "title": "Ojala Solutions | Räätälöidyt nettisivut ja web-sovellukset",
+      "description": "Ojala Solutions tekee räätälöityjä nettisivuja ja web-sovelluksia yrityksille ja yhdistyksille. Selkeät, nopeat ja hakukoneystävälliset ratkaisut – juuri sinun tarpeisiisi. Suomesta.",
+      "ogTitle": "Ojala Solutions | Räätälöidyt nettisivut ja web-sovellukset",
+      "ogDescription": "Räätälöidyt nettisivut ja web-sovellukset – juuri sinun tarpeisiisi."
     },
     "projects": {
       "title": "Portfolio | Ojala Solutions - Case Studies & Työt",
-      "description": "Tutustu Niilo Ojalan portfolio-projekteihin: Approt.app (digitaaliset appro-passit) ja Isofan (energiatehokas LVI-järjestelmien yrityssivusto säästölaskurilla). Rakennettu Reactilla, Next.js:llä ja moderneilla web-teknologioilla.",
+      "description": "Tutustu toteutuksiimme: Approt.app (digitaaliset appro-passit) ja Isofan (yrityssivusto energiansäästölaskurilla).",
       "ogTitle": "Portfolio | Ojala Solutions - Case Studies & Työt",
-      "ogDescription": "Tutustu Niilo Ojalan portfolio-projekteihin: Approt.app ja Isofan. Rakennettu Reactilla, Next.js:llä ja moderneilla web-teknologioilla."
+      "ogDescription": "Tutustu toteutuksiimme: Approt.app ja Isofan."
     }
   },
   "LocaleSwitcher": {

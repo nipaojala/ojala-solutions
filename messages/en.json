@@ -88,6 +88,10 @@
     "namePlaceholder": "Your name",
     "emailPlaceholder": "your.email@example.com",
     "messagePlaceholder": "Tell us about your project...",
+    "validation": {
+      "required": "Please fill out this field.",
+      "invalidEmail": "Please enter a valid email address."
+    },
     "send": "Send Message",
     "sending": "Sending...",
     "success": "Message Sent!",
@@ -101,23 +105,23 @@
   },
   "Metadata": {
     "layout": {
-      "title": "Ojala Solutions | Websites and web apps for businesses",
+      "title": "Ojala Solutions | Custom websites and web apps",
       "titleTemplate": "%s | Ojala Solutions",
-      "description": "Websites and web applications for companies and organisations. Latest technology, SEO, and a solution made for your needs. Based in Finland.",
-      "ogTitle": "Ojala Solutions | Websites and web apps for businesses",
-      "ogDescription": "Websites and web apps for businesses. Latest technology, SEO, and a solution made for your needs."
+      "description": "Custom websites and web applications for companies and organisations. Clear, fast, and search-friendly solutions — built for your needs. Based in Finland.",
+      "ogTitle": "Ojala Solutions | Custom websites and web apps",
+      "ogDescription": "Websites and web apps — built for your needs."
     },
     "home": {
-      "title": "Ojala Solutions | Websites and web apps for businesses",
-      "description": "Ojala Solutions designs and builds websites and web applications for companies and organisations. Latest technology, SEO, and a solution made for your needs. Based in Finland.",
-      "ogTitle": "Ojala Solutions | Websites and web apps for businesses",
-      "ogDescription": "Websites and web apps for businesses. Latest technology, SEO, and a solution made for your needs."
+      "title": "Ojala Solutions | Custom websites and web apps",
+      "description": "Ojala Solutions builds custom websites and web applications for companies and organisations. Clear, fast, and search-friendly solutions — built for your needs. Based in Finland.",
+      "ogTitle": "Ojala Solutions | Custom websites and web apps",
+      "ogDescription": "Websites and web apps — built for your needs."
     },
     "projects": {
       "title": "Portfolio | Ojala Solutions - Case Studies & Work",
-      "description": "Explore portfolio projects by Niilo Ojala: Approt.app (digital student bar crawl passes) and Isofan (energy-efficient LVI systems company website with savings calculator). Built with React, Next.js, and modern web technologies.",
+      "description": "Explore our work: Approt.app (digital student bar crawl passes) and Isofan (company website with an energy-saving calculator).",
       "ogTitle": "Portfolio | Ojala Solutions - Case Studies & Work",
-      "ogDescription": "Explore portfolio projects by Niilo Ojala: Approt.app and Isofan. Built with React, Next.js, and modern web technologies."
+      "ogDescription": "Explore our work: Approt.app and Isofan."
     }
   },
   "LocaleSwitcher": {

@@ -12,12 +12,31 @@ export default function ContactForm() {
     email: "",
     message: "",
   });
+  const [errors, setErrors] = useState<Partial<Record<keyof typeof formData, string>>>(
+    {},
+  );
   const [status, setStatus] = useState<
     "idle" | "sending" | "success" | "error"
   >("idle");
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    const nextErrors: Partial<Record<keyof typeof formData, string>> = {};
+    if (!formData.name.trim()) nextErrors.name = t("validation.required");
+    if (!formData.email.trim()) {
+      nextErrors.email = t("validation.required");
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email.trim())) {
+      nextErrors.email = t("validation.invalidEmail");
+    }
+    if (!formData.message.trim()) nextErrors.message = t("validation.required");
+
+    if (Object.keys(nextErrors).length > 0) {
+      setErrors(nextErrors);
+      return;
+    }
+
+    setErrors({});
     setStatus("sending");
 
     try {
@@ -39,10 +58,14 @@ export default function ContactForm() {
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
+    const { name, value } = e.target;
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value,
+      [name]: value,
     });
+    if (errors[name as keyof typeof formData]) {
+      setErrors((prev) => ({ ...prev, [name]: undefined }));
+    }
   };
 
   return (
@@ -64,6 +87,9 @@ export default function ContactForm() {
           className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#F7A5A5] focus:border-transparent transition-all outline-none"
           placeholder={t("namePlaceholder")}
         />
+        {errors.name && (
+          <p className="mt-2 text-sm text-red-600">{errors.name}</p>
+        )}
       </div>
       <div className="animate-fade-in-up delay-200">
         <label
@@ -82,6 +108,9 @@ export default function ContactForm() {
           className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#F7A5A5] focus:border-transparent transition-all outline-none"
           placeholder={t("emailPlaceholder")}
         />
+        {errors.email && (
+          <p className="mt-2 text-sm text-red-600">{errors.email}</p>
+        )}
       </div>
       <div className="animate-fade-in-up delay-300">
         <label
@@ -100,6 +129,9 @@ export default function ContactForm() {
           className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#F7A5A5] focus:border-transparent transition-all outline-none resize-none"
           placeholder={t("messagePlaceholder")}
         />
+        {errors.message && (
+          <p className="mt-2 text-sm text-red-600">{errors.message}</p>
+        )}
       </div>
       <div className="animate-fade-in-up delay-400">
         <Button
