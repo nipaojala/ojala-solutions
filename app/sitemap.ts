@@ -1,16 +1,15 @@
-import { MetadataRoute } from 'next';
+import type { MetadataRoute } from "next";
+
+const baseUrl = "https://www.ojala-solutions.fi";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  // Use ONE canonical host consistently (avoid www/non-www duplicates)
-  const baseUrl = 'https://ojala-solutions.fi';
   const lastModified = new Date();
 
-  // Hand-written routes (explicit URLs)
   return [
-    // Root
-    { url: baseUrl, lastModified },
-
-    // Home
+    {
+      url: baseUrl,
+      lastModified,
+    },
     {
       url: `${baseUrl}/fi`,
       lastModified,
@@ -31,8 +30,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
         },
       },
     },
-
-    // Projects
     {
       url: `${baseUrl}/fi/projects`,
       lastModified,
