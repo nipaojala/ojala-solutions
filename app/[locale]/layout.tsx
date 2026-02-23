@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import {notFound} from 'next/navigation';
-import {routing} from '../i18n/routing';
-import {Locale, hasLocale, NextIntlClientProvider} from 'next-intl';
-import {getTranslations, setRequestLocale} from 'next-intl/server';
-import {ReactNode} from 'react';
+import { notFound } from "next/navigation";
+import { routing } from "../i18n/routing";
+import { Locale, hasLocale, NextIntlClientProvider } from "next-intl";
+import { getTranslations, setRequestLocale } from "next-intl/server";
+import { ReactNode } from "react";
 import "../globals.css";
 
 const inter = Inter({
@@ -14,59 +14,51 @@ const inter = Inter({
 });
 
 export function generateStaticParams() {
-  return routing.locales.map((locale) => ({locale}));
+  return routing.locales.map((locale) => ({ locale }));
 }
 
 interface LocaleLayoutProps {
   children: ReactNode;
-  params: Promise<{locale: string}>;
+  params: Promise<{ locale: string }>;
 }
 
 export async function generateMetadata(
-  props: Omit<LocaleLayoutProps, 'children'>
+  props: Omit<LocaleLayoutProps, "children">,
 ): Promise<Metadata> {
-  const {locale} = await props.params;
+  const { locale } = await props.params;
   const t = await getTranslations({
     locale: locale as Locale,
-    namespace: 'Metadata.layout'
+    namespace: "Metadata.layout",
   });
 
   return {
     title: {
-      default: t('title'),
-      template: t('titleTemplate'),
+      default: t("title"),
+      template: t("titleTemplate"),
     },
-    description: t('description'),
+    description: t("description"),
     keywords: [
       "software development",
       "web development",
-      "React",
-      "Next.js",
-      "Node.js",
-      "TypeScript",
-      "banking software",
-      "AI",
-      "machine learning",
-      "cloud services",
-      "AWS",
       "Ojala Solutions",
       "Niilo Ojala",
-      "Finland developer",
-      "frontend developer",
-      "backend developer",
       "full stack developer",
+      "sovelluskehitys",
+      "nettisivut",
+      "verkkosivut",
+      "kotisivut",
     ],
     authors: [{ name: "Niilo Ojala" }],
     creator: "Niilo Ojala",
     publisher: "Ojala Solutions",
-    metadataBase: new URL("https://ojala-solutions.fi"),
+    metadataBase: new URL("https://www.ojala-solutions.fi"),
     openGraph: {
-      title: t('ogTitle'),
-      description: t('ogDescription'),
+      title: t("ogTitle"),
+      description: t("ogDescription"),
       type: "website",
-      locale: locale === 'fi' ? 'fi_FI' : 'en_US',
+      locale: locale === "fi" ? "fi_FI" : "en_US",
       siteName: "Ojala Solutions",
-      url: "https://ojala-solutions.fi",
+      url: "https://www.ojala-solutions.fi",
       images: [
         {
           url: "/logo.webp",
@@ -78,8 +70,8 @@ export async function generateMetadata(
     },
     twitter: {
       card: "summary_large_image",
-      title: t('ogTitle'),
-      description: t('ogDescription'),
+      title: t("ogTitle"),
+      description: t("ogDescription"),
       images: ["/logo.webp"],
       creator: "@ojalasolutions",
     },
@@ -94,9 +86,6 @@ export async function generateMetadata(
         "max-snippet": -1,
       },
     },
-    alternates: {
-      canonical: "https://ojala-solutions.fi",
-    },
     category: "Technology",
     classification: "Business",
   };
@@ -104,10 +93,10 @@ export async function generateMetadata(
 
 export default async function LocaleLayout({
   children,
-  params
+  params,
 }: LocaleLayoutProps) {
   // Ensure that the incoming `locale` is valid
-  const {locale} = await params;
+  const { locale } = await params;
   if (!hasLocale(routing.locales, locale)) {
     notFound();
   }
@@ -116,12 +105,8 @@ export default async function LocaleLayout({
   setRequestLocale(locale);
   return (
     <html lang={locale} className="scroll-smooth">
-      <body
-        className={`${inter.variable} antialiased`}
-      >
-      <NextIntlClientProvider>
-        {children}
-        </NextIntlClientProvider>
+      <body className={`${inter.variable} antialiased`}>
+        <NextIntlClientProvider>{children}</NextIntlClientProvider>
       </body>
     </html>
   );

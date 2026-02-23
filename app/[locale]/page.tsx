@@ -50,14 +50,14 @@ export async function generateMetadata(
     authors: [{ name: "Niilo Ojala" }],
     creator: "Niilo Ojala",
     publisher: "Ojala Solutions",
-    metadataBase: new URL("https://ojala-solutions.fi"),
+    metadataBase: new URL("https://www.ojala-solutions.fi"),
     openGraph: {
       title: t("ogTitle"),
       description: t("ogDescription"),
       type: "website",
       locale: locale === "fi" ? "fi_FI" : "en_US",
       siteName: "Ojala Solutions",
-      url: "https://ojala-solutions.fi",
+      url: `https://www.ojala-solutions.fi/${locale}`,
       images: [
         {
           url: "/logo.webp",
@@ -86,7 +86,12 @@ export async function generateMetadata(
       },
     },
     alternates: {
-      canonical: "https://ojala-solutions.fi",
+      canonical: `https://www.ojala-solutions.fi/${locale}`,
+      languages: {
+        fi: "https://www.ojala-solutions.fi/fi",
+        en: "https://www.ojala-solutions.fi/en",
+        "x-default": "https://www.ojala-solutions.fi/fi",
+      },
     },
     category: "Technology",
   };

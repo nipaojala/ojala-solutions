@@ -49,7 +49,7 @@ export async function generateMetadata(
       type: "website",
       locale: locale === "fi" ? "fi_FI" : "en_US",
       siteName: "Ojala Solutions",
-      url: "https://ojala-solutions.fi/projects",
+      url: `https://www.ojala-solutions.fi/${locale}/projects`,
       images: [
         {
           url: "/approt_main_picture.webp",
@@ -83,7 +83,12 @@ export async function generateMetadata(
       },
     },
     alternates: {
-      canonical: "https://ojala-solutions.fi/projects",
+      canonical: `https://www.ojala-solutions.fi/${locale}/projects`,
+      languages: {
+        fi: "https://www.ojala-solutions.fi/fi/projects",
+        en: "https://www.ojala-solutions.fi/en/projects",
+        "x-default": "https://www.ojala-solutions.fi/fi/projects",
+      },
     },
     category: "Portfolio",
   };
