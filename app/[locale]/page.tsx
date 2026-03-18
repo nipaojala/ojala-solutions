@@ -21,59 +21,52 @@ export async function generateMetadata(
   props: Omit<LocaleLayoutProps, "children">,
 ): Promise<Metadata> {
   const { locale } = await props.params;
+
   const t = await getTranslations({
     locale: locale as Locale,
     namespace: "Metadata.home",
   });
 
   return {
+    metadataBase: new URL("https://www.ojala-solutions.fi"),
+
     title: {
       default: t("title"),
       template: "%s | Ojala Solutions",
     },
+
     description: t("description"),
-    keywords: [
-      "nettisivut",
-      "web-sovellukset",
-      "yrityssivut",
-      "websites",
-      "web apps",
-      "companies",
-      "web development",
-      "React",
-      "Next.js",
-      "TypeScript",
-      "SEO",
-      "Ojala Solutions",
-      "Finland",
-    ],
+
     authors: [{ name: "Niilo Ojala" }],
     creator: "Niilo Ojala",
     publisher: "Ojala Solutions",
-    metadataBase: new URL("https://www.ojala-solutions.fi"),
+
     openGraph: {
       title: t("ogTitle"),
       description: t("ogDescription"),
       type: "website",
       locale: locale === "fi" ? "fi_FI" : "en_US",
+      alternateLocale: ["fi_FI", "en_US"],
       siteName: "Ojala Solutions",
-      url: `https://www.ojala-solutions.fi/${locale}`,
+      url: `/${locale}`,
       images: [
         {
-          url: "/logo.webp",
+          url: "https://www.ojala-solutions.fi/logo.webp",
           width: 1200,
           height: 630,
           alt: "Ojala Solutions Logo",
         },
       ],
     },
+
     twitter: {
       card: "summary_large_image",
       title: t("ogTitle"),
       description: t("ogDescription"),
-      images: ["/logo.webp"],
+      images: ["https://www.ojala-solutions.fi/logo.webp"],
       creator: "@ojalasolutions",
     },
+
     robots: {
       index: true,
       follow: true,
@@ -86,13 +79,14 @@ export async function generateMetadata(
       },
     },
     alternates: {
-      canonical: `https://www.ojala-solutions.fi/${locale}`,
+      canonical: `/${locale}`,
       languages: {
-        fi: "https://www.ojala-solutions.fi/fi",
-        en: "https://www.ojala-solutions.fi/en",
-        "x-default": "https://www.ojala-solutions.fi/fi",
+        fi: "/fi",
+        en: "/en",
+        "x-default": "/fi",
       },
     },
+
     category: "Technology",
   };
 }

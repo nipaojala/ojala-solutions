@@ -5,50 +5,39 @@ const baseUrl = "https://www.ojala-solutions.fi";
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
 
-  return [
+  const pages = [
     {
-      url: baseUrl,
-      lastModified,
+      fi: "/fi",
+      en: "/en",
     },
     {
-      url: `${baseUrl}/fi`,
-      lastModified,
-      alternates: {
-        languages: {
-          fi: `${baseUrl}/fi`,
-          en: `${baseUrl}/en`,
-        },
-      },
-    },
-    {
-      url: `${baseUrl}/en`,
-      lastModified,
-      alternates: {
-        languages: {
-          fi: `${baseUrl}/fi`,
-          en: `${baseUrl}/en`,
-        },
-      },
-    },
-    {
-      url: `${baseUrl}/fi/projects`,
-      lastModified,
-      alternates: {
-        languages: {
-          fi: `${baseUrl}/fi/projects`,
-          en: `${baseUrl}/en/projects`,
-        },
-      },
-    },
-    {
-      url: `${baseUrl}/en/projects`,
-      lastModified,
-      alternates: {
-        languages: {
-          fi: `${baseUrl}/fi/projects`,
-          en: `${baseUrl}/en/projects`,
-        },
-      },
+      fi: "/fi/projects",
+      en: "/en/projects",
     },
   ];
+
+  return pages.flatMap((page) => [
+    {
+      url: baseUrl + page.fi,
+      lastModified,
+      alternates: {
+        languages: {
+          fi: baseUrl + page.fi,
+          en: baseUrl + page.en,
+          "x-default": baseUrl + page.fi,
+        },
+      },
+    },
+    {
+      url: baseUrl + page.en,
+      lastModified,
+      alternates: {
+        languages: {
+          fi: baseUrl + page.fi,
+          en: baseUrl + page.en,
+          "x-default": baseUrl + page.fi,
+        },
+      },
+    },
+  ]);
 }

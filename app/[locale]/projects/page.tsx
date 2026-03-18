@@ -19,14 +19,18 @@ export async function generateMetadata(
   props: Omit<LocaleLayoutProps, "children">,
 ): Promise<Metadata> {
   const { locale } = await props.params;
+
   const t = await getTranslations({
     locale: locale as Locale,
     namespace: "Metadata.projects",
   });
 
   return {
+    metadataBase: new URL("https://www.ojala-solutions.fi"),
+
     title: t("title"),
     description: t("description"),
+
     keywords: [
       "portfolio",
       "case studies",
@@ -41,36 +45,41 @@ export async function generateMetadata(
       "Niilo Ojala portfolio",
       "Ojala Solutions portfolio",
     ],
+
     authors: [{ name: "Niilo Ojala" }],
     creator: "Niilo Ojala",
+
     openGraph: {
       title: t("ogTitle"),
       description: t("ogDescription"),
       type: "website",
       locale: locale === "fi" ? "fi_FI" : "en_US",
+      alternateLocale: ["fi_FI", "en_US"],
       siteName: "Ojala Solutions",
-      url: `https://www.ojala-solutions.fi/${locale}/projects`,
+      url: `/${locale}/projects`,
       images: [
         {
-          url: "/approt_main_picture.webp",
+          url: "https://www.ojala-solutions.fi/approt_main_picture.webp",
           width: 1200,
           height: 630,
           alt: "Approt.app Project",
         },
         {
-          url: "/isofan_frontpage.webp",
+          url: "https://www.ojala-solutions.fi/isofan_frontpage.webp",
           width: 1200,
           height: 630,
           alt: "Isofan Project",
         },
       ],
     },
+
     twitter: {
       card: "summary_large_image",
       title: t("ogTitle"),
       description: t("ogDescription"),
-      images: ["/approt_main_picture.webp"],
+      images: ["https://www.ojala-solutions.fi/approt_main_picture.webp"],
     },
+
     robots: {
       index: true,
       follow: true,
@@ -82,14 +91,16 @@ export async function generateMetadata(
         "max-snippet": -1,
       },
     },
+
     alternates: {
-      canonical: `https://www.ojala-solutions.fi/${locale}/projects`,
+      canonical: `/${locale}/projects`,
       languages: {
-        fi: "https://www.ojala-solutions.fi/fi/projects",
-        en: "https://www.ojala-solutions.fi/en/projects",
-        "x-default": "https://www.ojala-solutions.fi/fi/projects",
+        fi: "/fi/projects",
+        en: "/en/projects",
+        "x-default": "/fi/projects",
       },
     },
+
     category: "Portfolio",
   };
 }
